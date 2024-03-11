@@ -6,6 +6,5 @@ count = 0
 for i in range(n):
   if store[i] == milk[count]:
     count += 1
-  else: continue
 
 print(count)
