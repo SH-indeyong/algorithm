@@ -1,7 +1,3 @@
 s = input()
-alpha = [-1] * 26
-
-for i in range(26):
-  if chr(i+97) in s:
-    alpha[i] = s.index(chr(i+97))
-  print(alpha[i], end=' ')
+for i in range(97,123):
+    print(s.find(chr(i)), end=' ')
