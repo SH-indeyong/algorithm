@@ -1,9 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-num = []
-for i in range(9):
-  num.append(int(input()))
+num = [int(input()) for i in range(9)]
 
 maxi = max(num)
 print(maxi)
