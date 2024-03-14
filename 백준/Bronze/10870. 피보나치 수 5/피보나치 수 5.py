@@ -1,11 +1,7 @@
 n = int(input())
-f = [0] * (n+1)
-if n == 0:
-  print(0)
-  exit()
-f[1] = 1
+fibo = [0, 1]
 
-for i in range(2, n+1):
-  f[i] = f[i-2] + f[i-1]
+for i in range(1, n):
+  fibo.append(fibo[i - 1] + fibo[i])
 
-print(f[n])
+print(fibo[n])
