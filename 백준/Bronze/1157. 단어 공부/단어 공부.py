@@ -1,13 +1,14 @@
 s = input()
+s = s.upper()
 alpha = [0] * 26
 
-for i in s:
-  o = ord(i)
-  if o > 96:
-    o -= 32
-  alpha[o - 65] += 1
+for i in range(65, 91):
+  c = chr(i)
+  count = s.count(c)
+  alpha[i - 65] = count
 
-if alpha.count(max(alpha)) > 1:
+m = max(alpha)
+if alpha.count(m) > 1:
   print('?')
 else:
-  print(chr(alpha.index(max(alpha)) + 65))
+  print(chr(alpha.index(m) + 65))
